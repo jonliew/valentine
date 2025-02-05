@@ -1,3 +1,4 @@
+import { useLocalStorage } from "@/hooks/useLocalStorage";
 import { Frown, Heart } from "lucide-react";
 import { useState } from "react";
 import { Countdown } from "./Countdown";
@@ -7,6 +8,7 @@ import { H1, Large } from "./ui/typography";
 export function Question() {
 	const [showNoButton, setShowNoButton] = useState(true);
 	const [isYesChosen, setIsYesChosen] = useState(false);
+	const [hasResponded, setHasResponded] = useLocalStorage('hasResponded', false)
 
 	const onNoConsideration = () => {
 		setShowNoButton(false);
@@ -27,9 +29,10 @@ export function Question() {
 				}, 2000);
 		}
 		setIsYesChosen(true);
+		setHasResponded(true);
 	};
 
-	if (isYesChosen) {
+	if (isYesChosen || hasResponded) {
 		return (
 			<div className="h-[calc(100vh-57px)] flex justify-center items-center">
 				<div className="flex flex-col m-4">
