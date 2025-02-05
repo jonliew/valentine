@@ -6,7 +6,7 @@ export function MainNavBar() {
 		<div className="hidden md:flex w-full">
 			<div className="w-full flex gap-2 justify-between">
 				<div className="flex items-center">
-					<Heart color="red" />
+					<Heart color="red" fill="red" />
 				</div>
 				<div className="flex items-center">
 					Valentine

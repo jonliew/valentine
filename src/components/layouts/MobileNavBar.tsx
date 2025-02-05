@@ -17,7 +17,7 @@ export function MobileNavBar() {
 			<SheetContent side="left">
 				<div className="flex flex-col items-start gap-2">
 					<div className="flex items-center">
-						<Heart color="red" />
+						<Heart color="red" fill="red" />
 						<div className="ml-2">Valentine</div>
 					</div>
 					<div>
