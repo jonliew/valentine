@@ -1,13 +1,13 @@
 
 import './App.css'
-import { ModeToggle } from './components/ModeToggle'
+import { SiteHeader } from './components/layouts/SiteHeader'
 import { ThemeProvider } from './components/providers/ThemeProvider'
 
 function App() {
 
   return (
     <ThemeProvider defaultTheme='dark' storageKey='vite-ui-theme'>
-      <ModeToggle />
+      <SiteHeader />
     </ThemeProvider>
   )
 }
